@@ -1,13 +1,37 @@
 # Firefox Deflector
 
 This utility will allow you to open external links using any currently running firefox instance. By default firefox will open links by using the default profile, even if a window using a different profile is running.
+Firefox Deflector
+This utility will allow you to open external links using any currently running firefox instance. By default firefox will open links by using the default profile, even if a window using a different profile is running.
 
 ## Installation
 
-### Terminal One Liner
+### Terminal One Liner for download and installation.
 
 ```bash
-#TODO
+wget -qO- "https://github.com/murar8/firefox-deflector/archive/main.tar.gz" | tar xvz --transform 's/firefox-deflector-main/.firefox-deflector/' -C $HOME -- && $HOME/.firefox-deflector/install.sh
+```
+
+### Setting Firefox Deflector as your default browser
+
+#### Gnome
+
+From the Terminal
+
+```bash
+xdg-settings set default-web-browser firefox-deflector.desktop
+```
+
+From the UI
+
+or `Settings` -> `Default Apps` -> `Web` -> `Firefox Deflector`
+
+## Uninstallation
+
+**Make sure to copy this command exactly or your could permanently damage your system.**
+
+```bash
+rm -rf $HOME/.local/bin/firefox-deflector $HOME/.local/share/applications/firefox-deflector.desktop $HOME/.firefox-deflector
 ```
 
 ## License
