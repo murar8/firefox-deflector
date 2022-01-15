@@ -2,6 +2,10 @@
 
 This utility will allow you to open external links using any currently running firefox instance. By default firefox will open links by using the default profile, even if a window using a different profile is running.
 
+Tested on Pop!\_OS 20.04 LTS.
+
+**This is a Linux only utility.**
+
 ## Installation
 
 ### Terminal One Liner for download and installation.
