@@ -34,8 +34,6 @@ RUNNING_PROFILE_PATH="$(
         :
 )"
 
-echo "$RUNNING_INSTANCES"
-
 if [ -n "$RUNNING_PROFILE_NAME" ]; then
     $FIREFOX_EXE -P "$RUNNING_PROFILE_NAME" $@
 elif [ -n "$RUNNING_PROFILE_PATH" ]; then
