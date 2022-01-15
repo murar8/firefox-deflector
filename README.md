@@ -1,8 +1,6 @@
 # Firefox Deflector
 
 This utility will allow you to open external links using any currently running firefox instance. By default firefox will open links by using the default profile, even if a window using a different profile is running.
-Firefox Deflector
-This utility will allow you to open external links using any currently running firefox instance. By default firefox will open links by using the default profile, even if a window using a different profile is running.
 
 ## Installation
 
