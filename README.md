@@ -24,7 +24,7 @@ xdg-settings set default-web-browser firefox-deflector.desktop
 
 From the UI
 
-or `Settings` -> `Default Apps` -> `Web` -> `Firefox Deflector`
+`Settings` -> `Default Apps` -> `Web` -> `Firefox Deflector`
 
 ## Uninstallation
 
