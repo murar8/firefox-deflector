@@ -3,6 +3,9 @@
 # Description:  Install the firefox-deflector utility in the current system.
 #
 
+wget -qO- "https://raw.githubusercontent.com/murar8/firefox-deflector/main/firefox-deflector.sh"
+wget -qO- "https://raw.githubusercontent.com/murar8/firefox-deflector/main/firefox-deflector.desktop"
+
 set -Eeu
 
 INSTALL_LOCATION="$HOME/.local/bin"

@@ -11,7 +11,7 @@ Tested on Pop!\_OS 20.04 LTS.
 ### Terminal One Liner for download and installation.
 
 ```bash
-wget -qO- "https://github.com/murar8/firefox-deflector/archive/main.tar.gz" | tar xz --transform 's/firefox-deflector-main/.firefox-deflector/' -C $HOME -- && $HOME/.firefox-deflector/install.sh
+mkdir -P "$HOME/.firefox-deflector" && cd "$_" && wget -qO- "https://raw.githubusercontent.com/murar8/firefox-deflector/main/firefox-deflector.sh" && ./install.sh
 ```
 
 ### Setting Firefox Deflector as your default browser
