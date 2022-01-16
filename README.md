@@ -36,6 +36,14 @@ From the UI
 rm -rf $HOME/.local/bin/firefox-deflector $HOME/.local/share/applications/firefox-deflector.desktop $HOME/.firefox-deflector
 ```
 
+## Contributing
+
+If you are experiencing an issue and you would like to contribute you can also clone the repository directly.
+
+```bash
+git clone git@github.com:murar8/firefox-deflector.git $HOME/.firefox-deflector && $HOME/.firefox-deflector/install.sh
+```
+
 ## License
 
 Copyright (c) 2022 Lorenzo Murarotto <lnzmrr@gmail.com>
