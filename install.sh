@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #
-# Description:  Install the firefox-deflector utility in the current system.
-#
+# Description: Install the firefox-deflector utility in the current system.
 
 set -Eeu
 

@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #
-# Description:  Remove the firefox-deflector utility from the current system.
-#
+# Description: Remove the firefox-deflector utility from the current system.
 
 set -Eeu
 

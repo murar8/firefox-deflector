@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #
-# Description:  Proxy for the firefox executable that uses
-#               the currently running profile.
+# Description:  Proxy for the firefox executable that executes the currently running profile.
 #
 # Usage:        firefox-deflector.sh [URI]
 
