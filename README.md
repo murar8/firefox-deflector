@@ -8,40 +8,38 @@ Tested on Pop!\_OS 20.04 LTS.
 
 ## Installation
 
-### Terminal One Liner for download and installation.
+### Terminal One Liners for download and installation.
 
-```bash
-wget -qO- "https://github.com/murar8/firefox-deflector/archive/main.tar.gz" | tar xz --transform 's/firefox-deflector-main/.firefox-deflector/' -C $HOME -- && $HOME/.firefox-deflector/install.sh
-```
+- With wget
+
+  ```bash
+  wget -qO- "https://github.com/murar8/firefox-deflector/archive/main.tar.gz" | tar xz --transform 's/firefox-deflector-main/.firefox-deflector/' -C $HOME -- && $HOME/.firefox-deflector/install.sh
+  ```
+
+- With git
+
+  ```bash
+  git clone git@github.com:murar8/firefox-deflector.git $HOME/.firefox-deflector && $HOME/.firefox-deflector/install.sh
+  ```
 
 ### Setting Firefox Deflector as your default browser
 
 #### Gnome
 
-From the Terminal
+- From the Terminal
 
-```bash
-xdg-settings set default-web-browser firefox-deflector.desktop
-```
+  ```bash
+  xdg-settings set default-web-browser firefox-deflector.desktop
+  ```
 
-From the UI
+- From the UI
 
-`Settings` -> `Default Apps` -> `Web` -> `Firefox Deflector`
+  `Settings` -> `Default Apps` -> `Web` -> `Firefox Deflector`
 
 ## Uninstallation
 
-**Make sure to copy this command exactly or your could permanently damage your system.**
-
 ```bash
-rm -rf $HOME/.local/bin/firefox-deflector $HOME/.local/share/applications/firefox-deflector.desktop $HOME/.firefox-deflector
-```
-
-## Contributing
-
-If you are experiencing an issue and you would like to contribute you can also clone the repository directly.
-
-```bash
-git clone git@github.com:murar8/firefox-deflector.git $HOME/.firefox-deflector && $HOME/.firefox-deflector/install.sh
+$HOME/.firefox-deflector/uninstall.sh
 ```
 
 ## License
