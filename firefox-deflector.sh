@@ -20,13 +20,13 @@ RUNNING_INSTANCES="$(
         :
 )"
 
-echo "$RUNNING_INSTANCES" | while IFS= read -r instance; do
+while IFS= read -r instance; do
     for flag in "${PROFILE_FLAGS[@]}"; do
         if [[ $instance =~ ${FIREFOX_EXE}[[:space:]]+${flag}[[:space:]]+([^[:space:]]+) ]]; then
             $FIREFOX_EXE "$flag" "${BASH_REMATCH[1]}" $@
             exit 0
         fi
     done
-done
+done <<<"$RUNNING_INSTANCES"
 
 $FIREFOX_EXE $@
