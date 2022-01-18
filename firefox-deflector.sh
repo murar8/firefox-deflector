@@ -9,6 +9,8 @@ set -Eeu
 
 FIREFOX_EXE="/usr/lib/firefox/firefox"
 
+PROFILE_FLAGS=(-P -profile)
+
 RUNNING_INSTANCES="$(
     ps -F -u $UID |
         tr -s " " |
@@ -18,26 +20,13 @@ RUNNING_INSTANCES="$(
         :
 )"
 
-RUNNING_PROFILE_NAME="$(
-    echo "$RUNNING_INSTANCES" |
-        grep -Po '(?<=\-P)\s+\w+\s+' |
-        head -n 1 |
-        awk '{$1=$1};1' ||
-        :
-)"
+echo "$RUNNING_INSTANCES" | while IFS= read -r instance; do
+    for flag in "${PROFILE_FLAGS[@]}"; do
+        if [[ $instance =~ ${FIREFOX_EXE}[[:space:]]+${flag}[[:space:]]+([^[:space:]]+) ]]; then
+            $FIREFOX_EXE "$flag" "${BASH_REMATCH[1]}" $@
+            exit 0
+        fi
+    done
+done
 
-RUNNING_PROFILE_PATH="$(
-    echo "$RUNNING_INSTANCES" |
-        grep -Po '(?<=\-profile) (\/[^\/|\s]+)+' |
-        head -n 1 |
-        awk '{$1=$1};1' ||
-        :
-)"
-
-if [ -n "$RUNNING_PROFILE_NAME" ]; then
-    $FIREFOX_EXE -P "$RUNNING_PROFILE_NAME" $@
-elif [ -n "$RUNNING_PROFILE_PATH" ]; then
-    $FIREFOX_EXE -profile "$RUNNING_PROFILE_PATH" $@
-else
-    $FIREFOX_EXE $@
-fi
+$FIREFOX_EXE $@
